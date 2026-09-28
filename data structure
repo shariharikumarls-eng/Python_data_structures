@@ -1,0 +1,85 @@
+  #create 5random numbers
+import random
+
+s = [random.randint(1, 10)for _ in range(5)]
+print(s)
+
+import random
+
+#print original list
+s = [random.randint(1, 10)for _ in range(5)]
+print("Original list:", s)
+
+#add 3 values
+s.extend([11, 12, 13])
+
+#print updated list
+print("Updated list:", s)
+
+
+import random
+
+#print original list
+s = [random.randint(1, 10)for _ in range(5)]
+print("Original list:", s)
+
+#add 3 values
+s.extend([11, 12, 13])
+
+#print updated list
+print("Updated list:", s)
+
+#print element in the list
+print("Elements in the list:")
+for item in s:
+   print(item)
+
+   #create dictionary
+Person = {
+    "name": "John",
+    "age": "25",
+    "address": "NewYork"
+}
+
+print(Person)
+
+Person = {
+    "name": "John",
+    "age": "25",
+    "address": "NewYork"
+}
+
+#add a keyvalue
+Person["Phone"] = 1234567890
+
+print(Person)
+
+#create a set with values 1,2,3,4,5
+a = {1,2,3,4,5}
+
+print(a)
+
+from os import remove
+#removing 3 from set
+a = {1,2,3,4,5}
+
+a.remove(3)
+
+print(a)
+
+#add value 6
+a = {1,2,3,4,5}
+
+a.add(6)
+
+print(a)
+
+#create a tuple
+t = (1,2,3,4)
+
+print(t)
+
+#create length of the tuple
+t = (1,2,3,4)
+
+print("length of the tuple:", len(t))
