@@ -1,0 +1,110 @@
+#1
+import numpy as np
+arr = np.arange(1, 11)
+matrix = arr.reshape(2,5)
+print(matrix)
+
+#2
+arr20 = np.arange(1, 21)
+extracted_elements = arr20[5:15]
+print (arr20)
+print(extracted_elements)
+
+#3
+import numpy as np
+
+arr20 = np.arange(1, 21)
+
+mean = np.mean(arr20)
+median = np.median(arr20)
+std = np.std(arr20)
+
+print("mean is", mean)
+print("median is", median)
+print("standard deviation is", std)
+
+#4
+import numpy as np
+
+# Create a 2D array x of shape (3, 4)
+x = np.arange(12).reshape(3, 4)
+
+# Create a 1D array y of shape (4,)
+y = np.array([1, 2, 3, 4])
+
+# Subtract y from each row of x using broadcasting
+result = x - y
+
+print("Array x:\n", x)
+print("\nArray y:\n", y)
+print("\nResult (x - y):\n", result)
+
+#5
+import numpy as np
+import pandas as pd
+
+# 1. Create a DataFrame with 10 rows and columns: name, age, and gender
+data = {
+    "name": [
+        "Alice",
+        "Bob",
+        "Charlie",
+        "David",
+        "Eva",
+        "Frank",
+        "Grace",
+        "Hannah",
+        "Ian",
+        "Jack",
+    ],
+    "age": [25, 32, 28, 45, 29, 35, 41, 23, 38, 30],
+    "gender": [
+        "Female",
+        "Male",
+        "Male",
+        "Male",
+        "Female",
+        "Male",
+        "Female",
+        "Female",
+        "Male",
+        "Male",
+    ],
+}
+df = pd.DataFrame(data)
+
+# 2. Add a new column 'occupation' with values Programmer, Manager, and Analyst
+occupations = [
+    "Programmer",
+    "Manager",
+    "Analyst",
+    "Programmer",
+    "Manager",
+    "Analyst",
+    "Programmer",
+    "Manager",
+    "Analyst",
+    "Programmer",
+]
+df["occupation"] = occupations
+
+print("Initial DataFrame:")
+print(df)
+print("\n" + "=" * 50 + "\n")
+
+# 3. Select rows where age >= 30
+df_age_30 = df[df["age"] >= 30]
+
+print("Rows where age >= 30:")
+print(df_age_30)
+print("\n" + "=" * 50 + "\n")
+
+# 4. Convert to CSV file, read it back, and display the contents
+csv_file = "data.csv"
+df.to_csv(csv_file, index=False)
+
+# Read the CSV file
+df_from_csv = pd.read_csv(csv_file)
+
+print("Contents read from CSV file:")
+print(df_from_csv)
